@@ -8,12 +8,11 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-// añadir politicas Cors para que el front consuma la api
-builder.Services.AddCors(p => p.AddPolicy("corspolicy",build =>
+// importante para consumir la api desde local host
+builder.Services.AddCors(p => p.AddPolicy("corspolicy", build =>
 {
-    build.AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin();
+    build.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
 }));
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -22,15 +21,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-//correr las politicas cors
+//añadir las politicas
 app.UseCors("corspolicy");
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
 app.MapControllers();
-var programa = new programa();
-
-var recursividad = new Recursividad();
-recursividad.main();
 app.Run();

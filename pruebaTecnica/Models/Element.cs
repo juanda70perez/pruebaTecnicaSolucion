@@ -2,6 +2,7 @@
 {
     public class Element
     {
+        //distintos constructores de acuerdo a los parametros que se le pasan
         public Element() { 
         }
         public Element(int id, string nombre, int peso, int calorias)
