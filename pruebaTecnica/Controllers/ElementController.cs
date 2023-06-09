@@ -23,7 +23,7 @@ namespace pruebaTecnica.Controllers
             await funcion.InsertarElementos(element);
         }
 
-        [HttpPut("{id}")]
+        [HttpPut]
         public async Task<ActionResult> Put(int id, [FromBody] Element element)
         {
             var funcion = new Delementos();
@@ -31,7 +31,7 @@ namespace pruebaTecnica.Controllers
             await funcion.EditarElementos(element);
             return NoContent();
         }
-        [HttpDelete("{id}")]
+        [HttpDelete]
         public async Task<ActionResult> Delete(int id)
         {
             Element element = new Element();

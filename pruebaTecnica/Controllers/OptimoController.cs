@@ -12,8 +12,8 @@ namespace pruebaTecnica.Controllers
     [ApiController]
     public class OptimoController : ControllerBase
     {
-        [HttpPost()]
-        public async Task<ActionResult<Mochila>> post(int PesoMaximo,int CaloriasMinima)
+        [HttpGet]
+        public async Task<ActionResult<Mochila>> get(int PesoMaximo,int CaloriasMinima)
         {
             var funcion = new Delementos();
             var elementos = await funcion.MostrarElementos();
