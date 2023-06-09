@@ -23,8 +23,4 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
-var programa = new programa();
-
-var recursividad = new Recursividad();
-recursividad.main();
 app.Run();
