@@ -5,7 +5,7 @@ Backend hecho en Net core 6 para crear un api de elementos para escalar y calcul
 importante contar con una base de datos que tenga una tabla element con las siguientes columnas y su id sea auto incrementable ya que nunca se lo pasaremos
 ![Estructura base de datos](https://github.com/juanda70perez/pruebaTecnicaSolucion/assets/110078515/2b7f084e-f514-44cc-99e9-f47e6150377f)
 
-##Estructura
+## Estructura
 
 Se siguió el patron de diseño MVCpara organizar el proyecto 
 
@@ -29,7 +29,7 @@ app.UseCors("corspolicy");
 ```
 importante después modificarlas para mejorar la seguridad, ya que en este caso estamos permitiendo cualquier conexión de origen
 
-##Demo
+## Demo
 
 Podemos útilizar postman o Swagger que viene con el proyecto cuando eliges Net core para probar nuestras rutas de las apis
 ![Estuctura de las api](https://github.com/juanda70perez/pruebaTecnicaSolucion/assets/110078515/ca286648-b1df-4416-8757-a159b571c5a9)
