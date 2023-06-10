@@ -24,19 +24,17 @@ namespace pruebaTecnica.Controllers
         }
 
         [HttpPut]
-        public async Task<ActionResult> Put(int id, [FromBody] Element element)
+        public async Task<ActionResult> Put([FromBody] Element element)
         {
             var funcion = new Delementos();
-            element.Id = id;
             await funcion.EditarElementos(element);
             return NoContent();
         }
         [HttpDelete]
-        public async Task<ActionResult> Delete(int id)
+        public async Task<ActionResult> Delete([FromBody] Element element)
         {
-            Element element = new Element();
+ 
             var funcion = new Delementos();
-            element.Id = id;
             await funcion.EliminarElemento(element);
             return NoContent();
         }
