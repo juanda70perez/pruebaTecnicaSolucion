@@ -1,4 +1,4 @@
-# API consumida desdde React
+# Backend API En NET core 6 
 
 Backend hecho en Net core 6 para crear un api de elementos para escalar y calcular el conjunto óptimo para llevar, no se utilizó entity framework 
 
