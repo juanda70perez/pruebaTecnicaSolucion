@@ -7,7 +7,7 @@ importante contar con una base de datos que tenga una tabla element con las sigu
 
 ## Estructura
 
-Se siguió el patron de diseño MVCpara organizar el proyecto 
+Se siguió el patron de diseño MVC para organizar el proyecto 
 
 ![Estructura del proyecto](https://github.com/juanda70perez/pruebaTecnicaSolucion/assets/110078515/1dbf188d-4471-4ce7-b931-6c614351f49e)
 La carpeta conexión en su archivo conexionBD se encarga de recuperar la cadena de conexión que esta almacenada en appsetting.json ConnectionString aquí es donde debén poner su conexión con la base de datos
