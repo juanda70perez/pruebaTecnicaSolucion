@@ -6,7 +6,8 @@ importante contar con una base de datos que tenga una tabla element con las sigu
 ![Estructura base de datos](https://github.com/juanda70perez/pruebaTecnicaSolucion/assets/110078515/2b7f084e-f514-44cc-99e9-f47e6150377f)
 
 ##Estructura
-Se siguió el patron de diseño MVC para organizar el proyecto 
+
+Se siguió el patron de diseño MVCpara organizar el proyecto 
 
 ![Estructura del proyecto](https://github.com/juanda70perez/pruebaTecnicaSolucion/assets/110078515/1dbf188d-4471-4ce7-b931-6c614351f49e)
 La carpeta conexión en su archivo conexionBD se encarga de recuperar la cadena de conexión que esta almacenada en appsetting.json ConnectionString aquí es donde debén poner su conexión con la base de datos
@@ -27,7 +28,9 @@ se tiene que poner en el archivo program.cs estas lineas para añadir politicas
 app.UseCors("corspolicy");
 ```
 importante después modificarlas para mejorar la seguridad, ya que en este caso estamos permitiendo cualquier conexión de origen
+
 ##Demo
+
 Podemos útilizar postman o Swagger que viene con el proyecto cuando eliges Net core para probar nuestras rutas de las apis
 ![Estuctura de las api](https://github.com/juanda70perez/pruebaTecnicaSolucion/assets/110078515/ca286648-b1df-4416-8757-a159b571c5a9)
 
