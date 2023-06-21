@@ -1,3 +1,5 @@
+using pruebaTecnica.Datos;
+using pruebaTecnica.Models;
 using pruebaTecnica.Utilidades;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -28,4 +30,5 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
 app.Run();

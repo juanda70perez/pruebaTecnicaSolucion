@@ -12,17 +12,18 @@ namespace pruebaTecnica.Controllers
     [ApiController]
     public class OptimoController : ControllerBase
     {
-        [HttpGet]
-        public async Task<ActionResult<Mochila>> get(int PesoMaximo,int CaloriasMinima)
+        [HttpPost]
+        public Task<ActionResult<Mochila>> Post([FromBody] List<Element> elementos)
         {
-            var funcion = new Delementos();
-            var elementos = await funcion.MostrarElementos();
+            //valores quemados por el requisito
+            int PesoMaximo = 10;
+            int CaloriasMinima = 15;
             var optimo = new Recursividad();
             Mochila mochila = new Mochila(PesoMaximo, CaloriasMinima);
             Mochila optima = new Mochila(PesoMaximo, CaloriasMinima);
             optima.Peso = -1;
             optimo.llenarMochila(elementos, mochila, false, optima);
-            return optima;
+            return Task.FromResult<ActionResult<Mochila>>(optima);
         }
     }
 }
